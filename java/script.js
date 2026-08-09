@@ -2,109 +2,90 @@
 // SIMPLE MOBILE MENU — 100% WORKING
 // ============================================================
 
-// Wait for page to load
+// Wait for page to load completely
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Get menu elements
+  console.log('✅ JavaScript loaded!');
+
+  // Get elements
   var hamburger = document.getElementById('hamburger');
   var mainNav = document.getElementById('mainNav');
   var body = document.body;
 
-  // ===== HAMBURGER CLICK — OPEN/CLOSE MENU =====
+  // Check if elements exist
+  console.log('hamburger:', hamburger);
+  console.log('mainNav:', mainNav);
+
+  // ===== HAMBURGER CLICK =====
   if (hamburger && mainNav) {
     
-    hamburger.onclick = function() {
-      // Toggle class on hamburger
+    hamburger.addEventListener('click', function() {
+      console.log('Hamburger clicked!');
       this.classList.toggle('active');
-      // Toggle class on nav
       mainNav.classList.toggle('open');
       
-      // Lock body scroll when menu is open
       if (mainNav.classList.contains('open')) {
         body.style.overflow = 'hidden';
       } else {
         body.style.overflow = '';
       }
-    };
+    });
 
-    // ===== CLOSE MENU WHEN ANY LINK IS CLICKED =====
+    // ===== CLOSE MENU ON LINK CLICK =====
     var allLinks = mainNav.querySelectorAll('a');
     for (var i = 0; i < allLinks.length; i++) {
-      allLinks[i].onclick = function() {
-        // Close menu on mobile only
+      allLinks[i].addEventListener('click', function() {
         if (window.innerWidth <= 768) {
           hamburger.classList.remove('active');
           mainNav.classList.remove('open');
           body.style.overflow = '';
         }
-      };
+      });
     }
 
-    // ===== CLOSE MENU WHEN CLICKING OUTSIDE =====
-    document.onclick = function(event) {
+    // ===== CLOSE MENU ON OUTSIDE CLICK =====
+    document.addEventListener('click', function(event) {
       if (window.innerWidth <= 768) {
         var isClickInsideNav = mainNav.contains(event.target);
         var isClickOnHamburger = hamburger.contains(event.target);
         
-        if (!isClickInsideNav && !isClickOnHamburger) {
+        if (!isClickInsideNav && !isClickOnHamburger && mainNav.classList.contains('open')) {
           hamburger.classList.remove('active');
           mainNav.classList.remove('open');
           body.style.overflow = '';
         }
       }
-    };
+    });
 
-  } // end if hamburger exists
+  } else {
+    console.error('❌ Hamburger or MainNav not found!');
+  }
 
   // ===== DROPDOWN ON MOBILE =====
   var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
   for (var i = 0; i < dropdownToggles.length; i++) {
-    dropdownToggles[i].onclick = function(e) {
+    dropdownToggles[i].addEventListener('click', function(e) {
       if (window.innerWidth <= 768) {
         e.preventDefault();
         var parent = this.parentElement;
         parent.classList.toggle('open');
       }
-    };
+    });
   }
 
-  // ===== BACK TO TOP BUTTON =====
+  // ===== BACK TO TOP =====
   var backBtn = document.getElementById('backToTop');
   if (backBtn) {
-    window.onscroll = function() {
+    window.addEventListener('scroll', function() {
       if (window.scrollY > 400) {
         backBtn.classList.add('visible');
       } else {
         backBtn.classList.remove('visible');
       }
-    };
-    backBtn.onclick = function() {
+    });
+    backBtn.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-  }
-
-  // ===== SCROLL REVEAL =====
-  var revealElements = document.querySelectorAll(
-    '.section-header, .explore-card, .treatment-card, .hospital-card, ' +
-    '.india-item, .why-card, .journey-step, .testimonial-card'
-  );
-
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function(entries) {
-      for (var i = 0; i < entries.length; i++) {
-        if (entries[i].isIntersecting) {
-          entries[i].target.style.opacity = '1';
-          entries[i].target.style.transform = 'translateY(0)';
-        }
-      }
-    }, { threshold: 0.1 });
-
-    for (var i = 0; i < revealElements.length; i++) {
-      revealElements[i].style.opacity = '0';
-      revealElements[i].style.transform = 'translateY(30px)';
-      revealElements[i].style.transition = 'opacity 0.7s, transform 0.7s';
-      observer.observe(revealElements[i]);
-    }
+    });
   }
 
   // ===== ACTIVE NAV LINK =====
@@ -117,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // ===== CLOSE MENU ON WINDOW RESIZE (Desktop) =====
-  window.onresize = function() {
+  // ===== CLOSE MENU ON RESIZE =====
+  window.addEventListener('resize', function() {
     if (window.innerWidth > 768) {
       if (mainNav && mainNav.classList.contains('open')) {
         hamburger.classList.remove('active');
@@ -126,8 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
         body.style.overflow = '';
       }
     }
-  };
-
-  console.log('✅ HealVoyage JavaScript loaded successfully!');
+  });
 
 });
