@@ -25,14 +25,40 @@
 <!-- ===== HEADER ===== -->
 <header class="site-header" id="siteHeader">
   <div class="container header-flex">
+    
+    <!-- LOGO -->
     <div class="logo">
-      <a href="index.html"><span class="logo-icon">✦</span> HealVoyage <span class="logo-light">India</span></a>
+      <a href="index.html">
+        <span class="logo-icon">✦</span> HealVoyage <span class="logo-light">India</span>
+      </a>
     </div>
     
-    <!-- NAVIGATION -->
-    <nav class="main-nav" id="mainNav">
+    <!-- NAVIGATION — YE IMPORTANT HAI -->
+    <nav class="main-nav" id="mainNav">   <!-- ← id="mainNav" hona chahiye -->
       <ul class="nav-list">
-        <!-- Your nav links here -->
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="treatments.html" class="dropdown-toggle">Treatments <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="treatments.html#cardiology">Cardiology</a></li>
+            <li><a href="treatments.html#neurosurgery">Neurosurgery</a></li>
+            <li><a href="treatments.html#oncology">Oncology</a></li>
+            <li><a href="treatments.html#orthopaedics">Orthopaedics</a></li>
+            <li><a href="treatments.html">All Treatments</a></li>
+          </ul>
+        </li>
+        <li><a href="hospitals.html">Hospitals</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li class="dropdown">
+          <a href="international-patients.html" class="dropdown-toggle">International <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="international-patients.html#journey">Patient Journey</a></li>
+            <li><a href="international-patients.html#visa">Medical Visa</a></li>
+            <li><a href="international-patients.html#countries">Patients From</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-actions">
         <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20medical%20treatment%20in%20India." target="_blank" class="btn-icon" aria-label="WhatsApp">
@@ -44,15 +70,17 @@
       </div>
     </nav>
     
-    <!-- HAMBURGER -->
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <!-- HAMBURGER BUTTON — YE IMPORTANT HAI -->
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">   <!-- ← id="hamburger" hona chahiye -->
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
     </button>
+    
   </div>
 </header>
-<!-- ===== PAGE HERO ===== -->
+  
+  <!-- ===== PAGE HERO ===== -->
 <section class="hero" style="min-height: 40vh;">
   <div class="hero-overlay"></div>
   <div class="container hero-content" style="grid-template-columns: 1fr; text-align: center; padding: 3rem 0;">
