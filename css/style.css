@@ -1315,3 +1315,109 @@ p {
     animation: none !important;
   }
 }
+
+/* ============================================================
+   MOBILE NAV FIXES
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Make sure nav is above everything */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--surface);
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1001;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .main-nav.open {
+    transform: translateX(0);
+  }
+
+  /* Hamburger z-index */
+  .hamburger {
+    display: flex;
+    z-index: 1002;
+    position: relative;
+  }
+
+  /* Nav list full width */
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+  }
+
+  .nav-list > li {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-list > li > a {
+    display: block;
+    padding: 0.9rem 1rem;
+    width: 100%;
+    font-size: 1.05rem;
+  }
+
+  /* Dropdown on mobile */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding-left: 1.5rem;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    background: var(--background);
+    border-radius: 0;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li a {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* Nav actions on mobile */
+  .nav-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .nav-actions .btn-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+
+  /* Close button for menu - optional but helpful */
+  .main-nav::after {
+    content: '✕';
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text);
+    cursor: pointer;
+    display: none;
+  }
+
+  .main-nav.open::after {
+    display: block;
+  }
+}
