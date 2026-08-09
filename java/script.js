@@ -1,79 +1,42 @@
 // ============================================================
-// SIMPLE MOBILE MENU — 100% WORKING
+// SUPER SIMPLE MOBILE MENU
 // ============================================================
 
-// Wait for page to load completely
 document.addEventListener('DOMContentLoaded', function() {
-
-  console.log('✅ JavaScript loaded!');
-
-  // Get elements
-  var hamburger = document.getElementById('hamburger');
-  var mainNav = document.getElementById('mainNav');
-  var body = document.body;
-
-  // Check if elements exist
-  console.log('hamburger:', hamburger);
-  console.log('mainNav:', mainNav);
-
-  // ===== HAMBURGER CLICK =====
-  if (hamburger && mainNav) {
+  
+  var hamburger = document.querySelector('.hamburger');
+  var nav = document.querySelector('.main-nav');
+  
+  if (hamburger && nav) {
     
     hamburger.addEventListener('click', function() {
-      console.log('Hamburger clicked!');
       this.classList.toggle('active');
-      mainNav.classList.toggle('open');
-      
-      if (mainNav.classList.contains('open')) {
-        body.style.overflow = 'hidden';
-      } else {
-        body.style.overflow = '';
-      }
+      nav.classList.toggle('open');
     });
-
-    // ===== CLOSE MENU ON LINK CLICK =====
-    var allLinks = mainNav.querySelectorAll('a');
-    for (var i = 0; i < allLinks.length; i++) {
-      allLinks[i].addEventListener('click', function() {
+    
+    // Menu close on link click
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
         if (window.innerWidth <= 768) {
           hamburger.classList.remove('active');
-          mainNav.classList.remove('open');
-          body.style.overflow = '';
+          nav.classList.remove('open');
         }
       });
-    }
-
-    // ===== CLOSE MENU ON OUTSIDE CLICK =====
-    document.addEventListener('click', function(event) {
-      if (window.innerWidth <= 768) {
-        var isClickInsideNav = mainNav.contains(event.target);
-        var isClickOnHamburger = hamburger.contains(event.target);
-        
-        if (!isClickInsideNav && !isClickOnHamburger && mainNav.classList.contains('open')) {
-          hamburger.classList.remove('active');
-          mainNav.classList.remove('open');
-          body.style.overflow = '';
-        }
-      }
     });
-
-  } else {
-    console.error('❌ Hamburger or MainNav not found!');
+    
   }
-
-  // ===== DROPDOWN ON MOBILE =====
-  var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-  for (var i = 0; i < dropdownToggles.length; i++) {
-    dropdownToggles[i].addEventListener('click', function(e) {
+  
+  // Dropdown on mobile
+  document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
       if (window.innerWidth <= 768) {
         e.preventDefault();
-        var parent = this.parentElement;
-        parent.classList.toggle('open');
+        this.parentElement.classList.toggle('open');
       }
     });
-  }
-
-  // ===== BACK TO TOP =====
+  });
+  
+  // Back to top
   var backBtn = document.getElementById('backToTop');
   if (backBtn) {
     window.addEventListener('scroll', function() {
@@ -84,29 +47,16 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     backBtn.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({top: 0, behavior: 'smooth'});
     });
   }
-
-  // ===== ACTIVE NAV LINK =====
-  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  var navLinks = document.querySelectorAll('.nav-list a');
-  for (var i = 0; i < navLinks.length; i++) {
-    var href = navLinks[i].getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      navLinks[i].classList.add('active');
-    }
-  }
-
-  // ===== CLOSE MENU ON RESIZE =====
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-      if (mainNav && mainNav.classList.contains('open')) {
-        hamburger.classList.remove('active');
-        mainNav.classList.remove('open');
-        body.style.overflow = '';
-      }
+  
+  // Active link
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-list a').forEach(function(link) {
+    if (link.getAttribute('href') === page) {
+      link.classList.add('active');
     }
   });
-
+  
 });
