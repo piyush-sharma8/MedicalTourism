@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospitals · HealVoyage India</title>
+  <meta name="description" content="Discover leading hospitals across India — Jaipur, Delhi, Mumbai, Hyderabad, Chennai and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== UTILITY BAR ===== -->
+<div class="utility-bar">
+  <div class="container utility-flex">
+    <span class="utility-item"><i class="fas fa-headset"></i> International Patient Assistance 24/7</span>
+    <span class="utility-item"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+918529924513?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20medical%20treatment%20in%20India." target="_blank">WhatsApp</a></span>
+    <span class="utility-item"><i class="fas fa-phone-alt"></i> <a href="tel:+918529924513">Call Us</a></span>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-flex">
+    <div class="logo"><a href="index.html"><span class="logo-icon">✦</span> HealVoyage <span class="logo-light">India</span></a></div>
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="treatments.html" class="dropdown-toggle">Treatments <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="treatments.html#cardiology">Cardiology</a></li>
+            <li><a href="treatments.html#neurosurgery">Neurosurgery</a></li>
+            <li><a href="treatments.html#oncology">Oncology</a></li>
+            <li><a href="treatments.html#orthopaedics">Orthopaedics</a></li>
+            <li><a href="treatments.html">All Treatments</a></li>
+          </ul>
+        </li>
+        <li><a href="hospitals.html" class="active">Hospitals</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li class="dropdown">
+          <a href="international-patients.html" class="dropdown-toggle">International <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="international-patients.html#journey">Patient Journey</a></li>
+            <li><a href="international-patients.html#visa">Medical Visa</a></li>
+            <li><a href="international-patients.html#countries">Patients From</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/8529924513?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20medical%20treatment%20in%20India." target="_blank" class="btn-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+918529924513" class="btn-icon" aria-label="Call"><i class="fas fa-phone-alt"></i></a>
+      </div>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="hero" style="min-height: 40vh;">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content" style="grid-template-columns: 1fr; text-align: center; padding: 3rem 0;">
+    <div class="hero-text" style="max-width: 800px; margin: 0 auto;">
+      <span class="hero-badge"><i class="fas fa-hospital"></i> Healthcare Network</span>
+      <h1>Explore Leading Hospitals Across India</h1>
+      <p class="hero-sub" style="max-width: 100%;">From Jaipur to Chennai — discover hospitals with world-class infrastructure and experienced medical teams.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOSPITAL GRID ===== -->
+<section class="section" style="padding-top: 2rem;">
+  <div class="container">
+    <div class="hospital-grid" style="grid-template-columns: repeat(3, 1fr);">
+      
+      <div class="hospital-card">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400&auto=format&fit=crop" alt="Apollo Excellence" />
+        <div class="hospital-info">
+          <h3>Apollo Excellence</h3>
+          <p>Jaipur, Rajasthan</p>
+          <span class="badge">NABH</span> <span class="badge" style="background: #e8d5b5;">Multi-Speciality</span>
+          <p class="small">Cardiology · Orthopaedics · Neurosurgery · IVF</p>
+          <a href="contact.html" class="btn btn-small">Enquire</a>
+        </div>
+      </div>
+
+      <div class="hospital-card">
+        <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=400&auto=format&fit=crop" alt="Fortis Global" />
+        <div class="hospital-info">
+          <h3>Fortis Global</h3>
+          <p>Delhi NCR</p>
+          <span class="badge">JCI</span> <span class="badge" style="background: #e8d5b5;">Multi-Speciality</span>
+          <p class="small">Oncology · Transplant · Cardiology · Urology</p>
+          <a href="contact.html" class="btn btn-small">Enquire</a>
+        </div>
+      </div>
+
+      <div class="hospital-card">
+        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&auto=format&fit=crop" alt="Medanta Institute" />
+        <div class="hospital-info">
+          <h3>Medanta Institute</h3>
+          <p>Gurugram, Haryana</p>
+          <span class="badge">NABH</span> <span class="badge" style="background: #e8d5b5;">Multi-Speciality</span>
+          <p class="small">Neuro · Cardiac · GI · Transplant</p>
+          <a href="contact.html" class="btn btn-small">Enquire</a>
+        </div>
+      </div>
+
+      <div class="hospital-card">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&auto=format&fit=crop" alt="Max Healthcare" />
+        <div class="hospital-info">
+          <h3>Max Healthcare</h3>
+          <p>Delhi NCR</p>
+          <span class="badge">JCI</span> <span class="badge" style="background: #e8d5b5;">Multi-Speciality</span>
+          <p class="small">Cardiology · Oncology · Orthopaedics · IVF</p>
+          <a href="contact.html" class="btn btn-small">Enquire</a>
+        </div>
+      </div>
+
+      <div class="hospital-card">
+        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=400&auto=format&fit=crop" alt="Narayana Health" />
+        <div class="hospital-info">
+          <h3>Narayana Health</h3>
+          <p>Bengaluru, Karnataka</p>
+          <span class="badge">NABH</span> <span class="badge" style="background: #e8d5b5;">Cardiac Focus</span>
+          <p class="small">Cardiology · Transplant · Neuro · Ortho</p>
+          <a href="contact.html" class="btn btn-small">Enquire</a>
+        </div>
+      </div>
+
+      <div class="hospital-card">
+        <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=400&auto=format&fit=crop" alt="Manipal Hospitals" />
+        <div class="hospital-info">
+          <h3>Manipal Hospitals</h3>
+          <p>Bengaluru, Karnataka</p>
+          <span class="badge">JCI</span> <span class="badge" style="background: #e8d5b5;">Multi-Speciality</span>
+          <p class="small">Oncology · Transplant · IVF · Gastro</p>
+          <a href="contact.html" class="btn btn-small">Enquire</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW WE HELP ===== -->
+<section class="section" style="background: var(--surface);">
+  <div class="container">
+    <div class="section-header">
+      <h2>How We Help You Choose</h2>
+      <p>We make hospital selection simple and transparent.</p>
+    </div>
+    <div class="why-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="why-card"><i class="fas fa-file-medical-alt"></i><h4>Understand Your Requirement</h4><p>We listen to your medical needs and preferences.</p></div>
+      <div class="why-card"><i class="fas fa-list-check"></i><h4>Shortlist Suitable Hospitals</h4><p>We match you with hospitals that specialise in your condition.</p></div>
+      <div class="why-card"><i class="fas fa-scale-balanced"></i><h4>Compare Treatment Options</h4><p>We help you compare costs, facilities, and expertise.</p></div>
+      <div class="why-card"><i class="fas fa-circle-check"></i><h4>Make an Informed Decision</h4><p>You choose with confidence, supported by our guidance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col"><h4>HealVoyage India</h4><p>Premium medical concierge connecting patients to world-class healthcare across India.</p><div class="social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href="treatments.html">Treatments</a></li><li><a href="hospitals.html">Hospitals</a></li><li><a href="doctors.html">Doctors</a></li><li><a href="contact.html">Costs</a></li></ul></div>
+    <div class="footer-col"><h4>International</h4><ul><li><a href="international-patients.html#journey">Patient Journey</a></li><li><a href="international-patients.html#visa">Visa Information</a></li><li><a href="international-patients.html#countries">Patients From</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><address>Jaipur, Rajasthan, India</address><p><a href="tel:+918529924513">📞 +918529924513</a></p><p><a href="mailto:piyushsharma8529@gmail.com">✉️ piyushsharma8529@gmail.com</a></p></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>© 2026 HealVoyage India. All rights reserved. <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Disclaimer</a></p><p class="disclaimer">Disclaimer: This site provides information and coordination services. Medical decisions should be made with qualified healthcare professionals. Treatment outcomes cannot be guaranteed.</p></div></div>
+</footer>
+
+<!-- FLOATING WHATSAPP & BACK TO TOP -->
+<a href="https://wa.me/8529924513?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20medical%20treatment%20in%20India." target="_blank" class="floating-wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">Chat with us</span></a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<div class="mobile-sticky">
+  <a href="tel:+918529924513"><i class="fas fa-phone-alt"></i> Call</a>
+  <a href="https://wa.me/8529924513?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20medical%20treatment%20in%20India." target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <a href="hospitals.html"><i class="fas fa-hospital-alt"></i> Explore</a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
