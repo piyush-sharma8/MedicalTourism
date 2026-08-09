@@ -2,7 +2,10 @@
 // MOBILE HAMBURGER MENU
 // ============================================================
 const hamburger = document.getElementById('hamburger');
+if (!hamburger) return;
 const mainNav = document.getElementById('mainNav');
+ if (!mainNav) return;     // ← YEH LINE BHI ADD KARO (AGAR HAI TOH)
+  
 
 if (hamburger && mainNav) {
   hamburger.addEventListener('click', function() {
