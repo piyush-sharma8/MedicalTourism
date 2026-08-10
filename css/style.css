@@ -1315,3 +1315,274 @@ p {
     animation: none !important;
   }
 }
+/* ============================================================
+   MOBILE FIXES — Contact, Treatments, Hospitals
+   ============================================================ */
+
+/* ===== CONTACT PAGE — HORIZONTAL SCROLL FIX ===== */
+@media (max-width: 768px) {
+  
+  /* Contact page grid — 2 columns se 1 column */
+  .contact-page-grid,
+  .contact-grid,
+  .contact-info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Contact page cards — full width */
+  .contact-card,
+  .contact-info-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 1.2rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Contact form container */
+  .contact-form-container,
+  .contact-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+  
+  /* Contact page all containers */
+  .contact-page .container,
+  .contact-page section,
+  .contact-page .section {
+    overflow: hidden !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Any extra contact sections */
+  .contact-wrapper,
+  .contact-main {
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Buttons on contact page */
+  .contact-page .btn,
+  .contact-page a.btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ============================================================
+   TREATMENTS & HOSPITALS — MOBILE FIX
+   ============================================================ */
+
+@media (max-width: 768px) {
+  
+  /* ===== TREATMENTS PAGE ===== */
+  /* Treatment grid — 3 columns se 1 column */
+  .treatment-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+    padding: 0 !important;
+  }
+  
+  /* Treatment cards — full width */
+  .treatment-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  .treatment-card img {
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  .treatment-info {
+    padding: 1rem !important;
+  }
+  
+  .treatment-info h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  .treatment-info p {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Treatment page container */
+  .treatments-page .container,
+  .treatments-page section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    overflow: hidden !important;
+  }
+  
+  /* ===== HOSPITALS PAGE ===== */
+  /* Hospital grid — 3 columns se 1 column */
+  .hospital-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+    padding: 0 !important;
+  }
+  
+  /* Hospital cards — full width */
+  .hospital-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  .hospital-card img {
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  .hospital-info {
+    padding: 1rem !important;
+  }
+  
+  .hospital-info h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  .hospital-info p {
+    font-size: 0.9rem !important;
+  }
+  
+  .hospital-info .badge {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.6rem !important;
+  }
+  
+  /* Hospital page container */
+  .hospitals-page .container,
+  .hospitals-page section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    overflow: hidden !important;
+  }
+  
+  /* ===== "How We Help" section — 4 columns se 2 columns ===== */
+  .how-help-grid,
+  .why-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .how-help-card,
+  .why-card {
+    padding: 1rem !important;
+  }
+  
+  .how-help-card i,
+  .why-card i {
+    font-size: 1.5rem !important;
+  }
+  
+  .how-help-card h4,
+  .why-card h4 {
+    font-size: 0.9rem !important;
+  }
+  
+  .how-help-card p,
+  .why-card p {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ============================================================
+   EXTRA SMALL SCREENS (480px and below)
+   ============================================================ */
+
+@media (max-width: 480px) {
+  
+  /* Treatment & Hospital grids — still 1 column */
+  .treatment-grid,
+  .hospital-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* "How We Help" — 2 columns se 1 column */
+  .how-help-grid,
+  .why-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .treatment-card img,
+  .hospital-card img {
+    height: 180px !important;
+  }
+  
+  /* Contact page — extra padding */
+  .contact-page .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  
+  /* Hero on all pages */
+  .hero {
+    min-height: 60vh !important;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  .hero-sub {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* ============================================================
+   PREVENT HORIZONTAL SCROLL — GLOBAL FIX
+   ============================================================ */
+
+/* Make sure nothing overflows */
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* All containers */
+.container,
+section,
+.section,
+div[class*="container"],
+div[class*="wrapper"] {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* All images */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* All grids */
+[class*="grid"] {
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* All cards */
+[class*="card"] {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
