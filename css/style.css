@@ -1586,3 +1586,88 @@ img {
   max-width: 100% !important;
   box-sizing: border-box !important;
 }
+/* ============================================================
+   CONTACT PAGE — MOBILE FIX
+   ============================================================ */
+
+/* Contact options grid — mobile responsive */
+.contact-options-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1.2rem !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+.contact-option-card {
+  background: var(--surface) !important;
+  padding: 1.5rem 1rem !important;
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
+  text-align: center !important;
+  transition: var(--transition) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.contact-option-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-hover) !important;
+  border-color: var(--accent) !important;
+}
+
+.contact-option-card i {
+  font-size: 1.8rem !important;
+  display: block !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.contact-option-card h4 {
+  margin: 0.3rem 0 !important;
+  font-size: 1rem !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 600 !important;
+}
+
+.contact-option-card a,
+.contact-option-card p {
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  word-break: break-all !important;
+  margin: 0 !important;
+}
+
+/* Mobile: 2 columns se 1 column */
+@media (max-width: 480px) {
+  .contact-options-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.8rem !important;
+  }
+  
+  .contact-option-card {
+    padding: 1rem 0.8rem !important;
+  }
+  
+  .contact-option-card i {
+    font-size: 1.5rem !important;
+  }
+  
+  .contact-option-card h4 {
+    font-size: 0.85rem !important;
+  }
+  
+  .contact-option-card a,
+  .contact-option-card p {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Very small screens: 1 column */
+@media (max-width: 380px) {
+  .contact-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.8rem !important;
+  }
+}
